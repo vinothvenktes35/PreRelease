@@ -81,7 +81,7 @@
 				<version>3.0.0-M4</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>C:\Users\Dell\eclipse-workspace\SFE_Project_Pre_Release\testng_smoke.xml</suiteXmlFile>
+						<suiteXmlFile>C:\Users\Dell\git\PreRelease\SFE_Project_Pre_Release\testng_smoke.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<systemPropertyVariables>
 						<appURL>${url}</appURL>
