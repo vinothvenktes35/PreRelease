@@ -25,6 +25,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -893,7 +894,6 @@ public class Action extends BaseClass implements ActionInterface {
 
 	}
 
-
 	@Override
 	public void scrollUpWebPageTillHeader(WebDriver driver) {
 		// TODO Auto-generated method stub
@@ -905,109 +905,116 @@ public class Action extends BaseClass implements ActionInterface {
 	public void uploadUsingRobotClass(String path) throws AWTException {
 		// TODO Auto-generated method stub
 		StringSelection strSelection = new StringSelection(path);
-        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-        clipboard.setContents(strSelection, null);
- 
-        Robot robot = new Robot();
-  
-        robot.delay(300);
-        robot.keyPress(KeyEvent.VK_ENTER);
-        robot.keyRelease(KeyEvent.VK_ENTER);
-        robot.keyPress(KeyEvent.VK_CONTROL);
-        robot.keyPress(KeyEvent.VK_V);
-        robot.keyRelease(KeyEvent.VK_V);
-        robot.keyRelease(KeyEvent.VK_CONTROL);
-        robot.keyPress(KeyEvent.VK_ENTER);
-        robot.delay(200);
-        robot.keyRelease(KeyEvent.VK_ENTER);
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+		clipboard.setContents(strSelection, null);
+
+		Robot robot = new Robot();
+
+		robot.delay(300);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.delay(200);
+		robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 
 	@Override
 	public void brokenLinks(WebDriver driver) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		// link = a tag
-		
 
-		//1.1  get all list of all links 
+		// 1.1 get all list of all links
 
-				List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
 //				allLinks.addAll(driver.findElements(By.tagName("img")));
-				// get total links count
+		// get total links count
 //				System.out.println("all Links  counts:  " + allLinks.size());
-				Log.info("all Links  counts:  " + allLinks.size());
-				List<WebElement> activeLinks = new ArrayList<WebElement>();
-				Thread.sleep(8000);
-				
-				
-		//1.2. iterate link list : exclude all links do not have href attribute
-				for (int i = 0; i < allLinks.size(); i++) {
+		Log.info("all Links  counts:  " + allLinks.size());
+		List<WebElement> activeLinks = new ArrayList<WebElement>();
+		Thread.sleep(8000);
+
+		// 1.2. iterate link list : exclude all links do not have href attribute
+		for (int i = 0; i < allLinks.size(); i++) {
 //					System.out.println(allLinks.get(i).getAttribute("href"));
-					 Log.info(allLinks.get(i).getAttribute("href"));
-					if (allLinks.get(i).getAttribute("href") != null && (!allLinks.get(i).getAttribute("href").contains("javascript"))) {
-						activeLinks.add(allLinks.get(i));
-					}
-				}
-		        //get active links count
+			Log.info(allLinks.get(i).getAttribute("href"));
+			if (allLinks.get(i).getAttribute("href") != null
+					&& (!allLinks.get(i).getAttribute("href").contains("javascript"))) {
+				activeLinks.add(allLinks.get(i));
+			}
+		}
+		// get active links count
 //				System.out.println("active Links counts:  " + activeLinks.size());
-				 Log.info("active Links counts:  " + activeLinks.size());
-				Thread.sleep(8000);
-		//1.3. check the href url, http connection api
-				//200 --->ok
-					//404--->not found
-					//400--->bad request
-					//500--->internal error
-				 for (int j = 0; j < activeLinks.size(); j++) {
-					 HttpURLConnection connection= (HttpURLConnection) new URL(activeLinks.get(j).getAttribute("href")).openConnection();
-					 connection.setConnectTimeout(5000);
-					 connection.connect();
-					String response= connection.getResponseMessage();//ok
-					 connection.disconnect();
+		Log.info("active Links counts:  " + activeLinks.size());
+		Thread.sleep(8000);
+		// 1.3. check the href url, http connection api
+		// 200 --->ok
+		// 404--->not found
+		// 400--->bad request
+		// 500--->internal error
+		for (int j = 0; j < activeLinks.size(); j++) {
+			HttpURLConnection connection = (HttpURLConnection) new URL(activeLinks.get(j).getAttribute("href"))
+					.openConnection();
+			connection.setConnectTimeout(5000);
+			connection.connect();
+			String response = connection.getResponseMessage();// ok
+			connection.disconnect();
 //					 System.out.println(activeLinks.get(j).getAttribute("href")+"---->"+response);
-					 Log.info(activeLinks.get(j).getAttribute("href")+"---->"+response);
-				 }
+			Log.info(activeLinks.get(j).getAttribute("href") + "---->" + response);
+		}
 	}
 
 	@Override
 	public void brokenImages(WebDriver driver) throws InterruptedException, MalformedURLException, IOException {
 		// TODO Auto-generated method stub
-		//images = img tag
-		//2.1.  get all list of all images
+		// images = img tag
+		// 2.1. get all list of all images
 
-				List<WebElement> allImages = driver.findElements(By.tagName("img"));
-				// get total images count
+		List<WebElement> allImages = driver.findElements(By.tagName("img"));
+		// get total images count
 //				System.out.println("all  images counts:  " + allImages.size());
-				Log.info("all  images counts:  " + allImages.size());
-				List<WebElement> activeImages = new ArrayList<WebElement>();
-				Thread.sleep(8000);
-			
-		//2.2. iterate link list : exclude all images do not have href attribute
-						for (int k = 0; k < allImages.size(); k++) {
-							Log.info(allImages.get(k).getAttribute("src"));
+		Log.info("all  images counts:  " + allImages.size());
+		List<WebElement> activeImages = new ArrayList<WebElement>();
+		Thread.sleep(8000);
+
+		// 2.2. iterate link list : exclude all images do not have href attribute
+		for (int k = 0; k < allImages.size(); k++) {
+			Log.info(allImages.get(k).getAttribute("src"));
 //							System.out.println(allImages.get(k).getAttribute("src"));
-							if (allImages.get(k).getAttribute("src") != null && (!allImages.get(k).getAttribute("src").contains("javascript"))) {
-								activeImages.add(allImages.get(k));
-							}
-						}
-				        //get active Images count
-//						System.out.println("active  images counts:  " + activeImages.size());
-						Log.info("active  images counts:  " + activeImages.size());
-						Thread.sleep(8000);
-		//2.3. check the href url, http connection api
-						//200 --->ok
-							//404--->not found
-							//400--->bad request
-							//500--->internal error
-						 for (int l = 0; l < activeImages.size(); l++) {
-							 HttpURLConnection connection= (HttpURLConnection) new URL(activeImages.get(l).getAttribute("src")).openConnection();
-							 connection.connect();
-							String response= connection.getResponseMessage();//ok
-							 connection.disconnect();
-//							 System.out.println(activeImages.get(l).getAttribute("src")+"---->"+response);
-							 Log.info(activeImages.get(l).getAttribute("src")+"---->"+response);
-						 }
-			 
-			
-						 
+			if (allImages.get(k).getAttribute("src") != null
+					&& (!allImages.get(k).getAttribute("src").contains("javascript"))) {
+				activeImages.add(allImages.get(k));
 			}
+		}
+		// get active Images count
+//						System.out.println("active  images counts:  " + activeImages.size());
+		Log.info("active  images counts:  " + activeImages.size());
+		Thread.sleep(8000);
+		// 2.3. check the href url, http connection api
+		// 200 --->ok
+		// 404--->not found
+		// 400--->bad request
+		// 500--->internal error
+		for (int l = 0; l < activeImages.size(); l++) {
+			HttpURLConnection connection = (HttpURLConnection) new URL(activeImages.get(l).getAttribute("src"))
+					.openConnection();
+			connection.connect();
+			String response = connection.getResponseMessage();// ok
+			connection.disconnect();
+//							 System.out.println(activeImages.get(l).getAttribute("src")+"---->"+response);
+			Log.info(activeImages.get(l).getAttribute("src") + "---->" + response);
+		}
+
 	}
 
+	@Override
+	public void clearWebField(WebElement element) {
+		while (!element.getAttribute("value").equals("")) {
+			element.sendKeys(Keys.BACK_SPACE);
+		}
+	}
+
+}

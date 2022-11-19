@@ -94,6 +94,7 @@ public class DataProviders {
 		return data;
 	}
 
+	
 	@DataProvider(name="SignUpNo")
 	public Object[][] signUPNumber() {
 		int rows=obj.getRowCount("SignUpNo");

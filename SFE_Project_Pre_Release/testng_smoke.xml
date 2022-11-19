@@ -12,9 +12,7 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="com.sfe.testscripts.SignUpPageTest" />
 			<class name="com.sfe.testscripts.SignInPageTest" />
-			<class name="com.sfe.testscripts.ProfilePageTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

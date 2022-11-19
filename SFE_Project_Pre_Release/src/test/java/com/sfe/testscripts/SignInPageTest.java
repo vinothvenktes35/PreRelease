@@ -106,5 +106,8 @@ public class SignInPageTest extends BaseClass {
 		Assert.assertTrue(result);
 		Log.endTestCase("Validated sing Up popup successfully");
 	}
+        
+   
+    	
 
 }

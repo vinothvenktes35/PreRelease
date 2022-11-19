@@ -101,28 +101,28 @@ public class ProfilePageObjects extends BaseClass {
 
 		Log.info("Enter first name");
 		action.JSClick(getDriver(), profilefirstName);
-		action.selectAll(profilefirstName);
+		action.clearWebField(profileIndustryDdn);
 		action.type(profilefirstName, fName);
 
 		Log.info("Enter last name");
 		action.JSClick(getDriver(), profileLastName);
-		action.selectAll(profileLastName);
+		action.clearWebField(profileLastName);
 		action.type(profileLastName, lName);
 
 		Log.info("Enter company name");
 		action.JSClick(getDriver(), profileCompanyName);
-		action.selectAll(profileCompanyName);
+		action.clearWebField(profileCompanyName);
 		action.type(profileCompanyName, companyName);
 
 		Log.info("Enter designation name");
 		action.JSClick(getDriver(), profileDesignation);
-		action.selectAll(profileDesignation);
+		action.clearWebField(profileDesignation);
 		action.type(profileDesignation, designation);
 
 		Log.info("country");
 		action.JSClick(getDriver(), ProfileCountryDdn);
 		Thread.sleep(1000);
-		action.selectAll(ProfileCountryDdnTxt);
+		action.clearWebField(ProfileCountryDdnTxt);
 		action.type(ProfileCountryDdnTxt, country);
 		Thread.sleep(1000);
 		action.enter();
@@ -130,7 +130,7 @@ public class ProfilePageObjects extends BaseClass {
 		Log.info("industry");
 		action.JSClick(getDriver(), profileIndustryDdn);
 		Thread.sleep(1000);
-		action.selectAll(ProfileIndustryDdnTxt);
+		action.clearWebField(ProfileIndustryDdnTxt);
 		action.type(ProfileIndustryDdnTxt, industry);
 		Thread.sleep(1000);
 		action.enter();
@@ -147,7 +147,7 @@ public class ProfilePageObjects extends BaseClass {
 		Log.info("Tax Id");
 		action.type(profileTaxID, taxId);
 		Thread.sleep(2000);
-		action.selectAll(profileTaxID);
+		action.clearWebField(profileTaxID);
 		action.type(profileTaxID, taxId);
 
 		Log.info("Click save button");

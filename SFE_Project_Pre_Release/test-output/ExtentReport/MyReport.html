@@ -54,7 +54,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Nov 9, 2022 10:29:03 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Nov 19, 2022 07:18:32 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -70,6 +70,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -112,10 +113,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>14</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='85.714%'><span class='strong'>6</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='14.286%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -133,17 +134,17 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>googleSingUp</span>
-						<span class='test-time'>Nov 9, 2022 10:29:07 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>googleSignIn</span>
+						<span class='test-time'>Nov 19, 2022 07:18:43 AM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:29:07 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:29:26 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+468ms</span>
+	<span class='label start-time'>Nov 19, 2022 07:18:43 AM</span>
+	<span class='label end-time'>Nov 19, 2022 07:19:05 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+407ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -155,12 +156,28 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:29:26 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:19:05 AM</td>
 				<td class='step-details'>
-						Pass Test case is: googleSingUp
+						<span class='badge white-text red'>googleSignIn - Test Case Failed</span>
 					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:19:05 AM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'>java.lang.AssertionError: expected [https://pre-release.smefe.org/dashboard] but found [https://accounts.google.com/signin/v2/challenge/selection?client_id=274502581927-uv74v3o9i9s80vai0nnc0sd0e4f0vsi7.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fauth.proxtera.com%2Foauth2%2Fidpresponse&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&response_type=code&state=H4sIAAAAAAAAAE2QX3OqMBDFv0uejfJHEXiTKdopVWyrgr1zxwnJQqho0hCw5c797o1vfTy7vz175vxDBIWISNyKTnMgrcb2KXEfP5_37DpHI1SY9UqIqgEjqBFTClDKj4La_Nx_1kVzFl7vdIErDcAMwLWWbTiZSAVYQWM8YdxeoISxUNXEQGAgKtjdsPztXqHwDxISrjW7UxdSN-jvCJ3vT5Py1KWDc1pKZkeQ1X3MKdWx3CeVd0g8qY7X2cbtdZQMsX29pUy962pZraJvy3u1YrdP-FY_LCzebrffNK4PB-pHL2xNc_0g6uMh29auzpOnOTvibJ9Vw8eMa5J3i37FN5t-3R29xxTLpzwTnHjzZZwO-2b3HpHd8Cb9-va8SNb5Tlnpi4ne3Cs1dY6lEl8aFBlTcTHzCwptz_N9x5m51ghJFJakaWGElDlwbQgCywHM7IDhKRQEE-ZRPHMsPyh8f2pDif7_ABzrq4KwAQAA.H4sIAAAAAAAAAAEgAN__FmXS2VTQabtxYt2v2z1Ds_NfzUlYsfNMQHyPPpC_Ke12Gu2BIAAAAA.3&service=lso&o2v=2&flowName=GeneralOAuthFlow&cid=1&TL=ADFpJfM8unXiCiUzS-tYqtNmpiS7OzcL6aEIUTPVSAqlk4gfnorOcCx-U0g2xkau&lid=2&navigationDirection=forward] - Test Case Failed</span>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>7:19:05 AM</td>
+				<td class='step-details'>
+						ScreenShot is Attached
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/googleSignIn_20221119071905.png' src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/googleSignIn_20221119071905.png' data-src='http://localhost:8082/job/MyStoreProject/ws/MyStoreProject/ScreenShots/googleSignIn_20221119071905.png'>
 				</td>
 			</tr>
 		</tbody>
@@ -170,225 +187,15 @@
 				</li>
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>whatsAppSignUp</span>
-						<span class='test-time'>Nov 9, 2022 10:29:29 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:29:29 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:29:37 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+518ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:29:37 PM</td>
-				<td class='step-details'>
-						Pass Test case is: whatsAppSignUp
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
-					<div class='test-heading'>
-						<span class='test-name'>AlreadyAMemberSignin</span>
-						<span class='test-time'>Nov 9, 2022 10:29:40 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:29:40 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:29:41 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+800ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:29:41 PM</td>
-				<td class='step-details'>
-						Pass Test case is: AlreadyAMemberSignin
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
-					<div class='test-heading'>
-						<span class='test-name'>emailSingUp</span>
-						<span class='test-time'>Nov 9, 2022 10:29:45 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:29:45 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:29:52 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+268ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:29:52 PM</td>
-				<td class='step-details'>
-						Pass Test case is: emailSingUp
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
-					<div class='test-heading'>
-						<span class='test-name'>facebookSingUp</span>
-						<span class='test-time'>Nov 9, 2022 10:29:55 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:29:55 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:30:10 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+688ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:30:10 PM</td>
-				<td class='step-details'>
-						Pass Test case is: facebookSingUp
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
-					<div class='test-heading'>
-						<span class='test-name'>mobileSignUp</span>
-						<span class='test-time'>Nov 9, 2022 10:30:13 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:30:13 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:30:22 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+36ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:30:22 PM</td>
-				<td class='step-details'>
-						Pass Test case is: mobileSignUp
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
-					<div class='test-heading'>
-						<span class='test-name'>googleSignIn</span>
-						<span class='test-time'>Nov 9, 2022 10:30:26 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:30:26 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:30:46 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+14ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:30:46 PM</td>
-				<td class='step-details'>
-						Pass Test case is: googleSignIn
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
-					<div class='test-heading'>
 						<span class='test-name'>emailSignIn</span>
-						<span class='test-time'>Nov 9, 2022 10:30:49 PM</span>
+						<span class='test-time'>Nov 19, 2022 07:19:09 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:30:49 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:31:08 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+712ms</span>
+	<span class='label start-time'>Nov 19, 2022 07:19:09 AM</span>
+	<span class='label end-time'>Nov 19, 2022 07:19:40 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+729ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -402,7 +209,7 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:31:08 PM</td>
+				<td class='timestamp'>7:19:40 AM</td>
 				<td class='step-details'>
 						Pass Test case is: emailSignIn
 					
@@ -413,17 +220,17 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>facebookSignIn</span>
-						<span class='test-time'>Nov 9, 2022 10:31:11 PM</span>
+						<span class='test-time'>Nov 19, 2022 07:19:43 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:31:11 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:31:30 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+365ms</span>
+	<span class='label start-time'>Nov 19, 2022 07:19:43 AM</span>
+	<span class='label end-time'>Nov 19, 2022 07:20:03 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+807ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -437,7 +244,7 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:31:30 PM</td>
+				<td class='timestamp'>7:20:03 AM</td>
 				<td class='step-details'>
 						Pass Test case is: facebookSignIn
 					
@@ -448,17 +255,17 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
 					<div class='test-heading'>
 						<span class='test-name'>forgotPassword</span>
-						<span class='test-time'>Nov 9, 2022 10:31:33 PM</span>
+						<span class='test-time'>Nov 19, 2022 07:20:06 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:31:33 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:31:41 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+19ms</span>
+	<span class='label start-time'>Nov 19, 2022 07:20:06 AM</span>
+	<span class='label end-time'>Nov 19, 2022 07:20:14 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+244ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -472,7 +279,7 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:31:41 PM</td>
+				<td class='timestamp'>7:20:14 AM</td>
 				<td class='step-details'>
 						Pass Test case is: forgotPassword
 					
@@ -483,17 +290,17 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
 					<div class='test-heading'>
 						<span class='test-name'>mobileSignIn</span>
-						<span class='test-time'>Nov 9, 2022 10:31:45 PM</span>
+						<span class='test-time'>Nov 19, 2022 07:20:18 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:31:45 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:31:55 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+294ms</span>
+	<span class='label start-time'>Nov 19, 2022 07:20:18 AM</span>
+	<span class='label end-time'>Nov 19, 2022 07:20:29 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+267ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -507,7 +314,7 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:31:55 PM</td>
+				<td class='timestamp'>7:20:29 AM</td>
 				<td class='step-details'>
 						Pass Test case is: mobileSignIn
 					
@@ -518,17 +325,17 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
 					<div class='test-heading'>
 						<span class='test-name'>notRegisteredSignUp</span>
-						<span class='test-time'>Nov 9, 2022 10:31:58 PM</span>
+						<span class='test-time'>Nov 19, 2022 07:20:32 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:31:58 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:32:02 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+645ms</span>
+	<span class='label start-time'>Nov 19, 2022 07:20:32 AM</span>
+	<span class='label end-time'>Nov 19, 2022 07:20:36 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+627ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -542,7 +349,7 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:32:02 PM</td>
+				<td class='timestamp'>7:20:36 AM</td>
 				<td class='step-details'>
 						Pass Test case is: notRegisteredSignUp
 					
@@ -553,17 +360,17 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
 					<div class='test-heading'>
 						<span class='test-name'>whatsAppSignIn</span>
-						<span class='test-time'>Nov 9, 2022 10:32:05 PM</span>
+						<span class='test-time'>Nov 19, 2022 07:20:39 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:32:05 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:32:14 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+259ms</span>
+	<span class='label start-time'>Nov 19, 2022 07:20:39 AM</span>
+	<span class='label end-time'>Nov 19, 2022 07:20:48 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+534ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -577,44 +384,9 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:32:14 PM</td>
+				<td class='timestamp'>7:20:48 AM</td>
 				<td class='step-details'>
 						Pass Test case is: whatsAppSignIn
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
-					<div class='test-heading'>
-						<span class='test-name'>editProfilePage</span>
-						<span class='test-time'>Nov 9, 2022 10:32:17 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Nov 9, 2022 10:32:17 PM</span>
-	<span class='label end-time'>Nov 9, 2022 10:33:08 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 50s+815ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>10:33:08 PM</td>
-				<td class='step-details'>
-						Pass Test case is: editProfilePage
 					
 				</td>
 			</tr>
@@ -651,7 +423,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>14</div>
+					<div class='panel-lead'>7</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -663,19 +435,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Nov 9, 2022 10:29:03 PM</div>
+					<div class='panel-lead'>Nov 19, 2022 07:18:32 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Nov 9, 2022 10:33:09 PM</div>
+			 		<div class='panel-lead'>Nov 19, 2022 07:20:49 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 4m 5s+940ms</div>
+					<div class='panel-lead'>0h 2m 16s+784ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -718,14 +490,14 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 14,
-				passParent: 14,
-				failParent: 0,
+                parentCount: 7,
+				passParent: 6,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -750,7 +522,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "googleSingUp":18.468,"whatsAppSignUp":7.518,"AlreadyAMemberSignin":0.8,"emailSingUp":7.268,"facebookSingUp":14.688,"mobileSignUp":9.036,"googleSignIn":20.014,"emailSignIn":18.712,"facebookSignIn":19.365,"forgotPassword":8.019,"mobileSignIn":10.294,"notRegisteredSignUp":3.645,"whatsAppSignIn":9.259,"editProfilePage":50.815
+			        "googleSignIn":21.407,"emailSignIn":30.729,"facebookSignIn":19.807,"forgotPassword":8.244,"mobileSignIn":11.267,"notRegisteredSignUp":3.627,"whatsAppSignIn":9.534
 			};
 		</script>
 		<script src='http://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
